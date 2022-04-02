@@ -59,8 +59,7 @@ public class FileFinal {
 					break;
 				case 4:
 					System.out.println("Please enter the name of the file to be deleted");
-					String path = "C:\\Users\\jpand\\Desktop\\Test\\";
-					//String fileDel = sc.next();
+					String path = "C:\\Users\\jpand\\Desktop\\Test\\z.txt";
 					String finalfile = path;
 					File f = new File(finalfile);
 					boolean flag1 = f.delete();
@@ -84,7 +83,6 @@ public class FileFinal {
 					for(File ff:filen) {
 						String s1 = ff+"";
 						String ss[] =s1.split("\\\\");
-						//System.out.println(ff);
 						System.out.println(ss[ss.length - 1]);
 					}
 					break;
