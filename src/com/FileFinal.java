@@ -27,12 +27,10 @@ public class FileFinal {
 			switch(choice) {
 			case 1: 
 	
-
-	String s="Hi how are you this is the first file";
+				String s="Hi how are you this is the first file";
 			
 			//byte
-			
-			FileOutputStream fos=new FileOutputStream("C:\\Users\\jpand\\Software\\Test\\p.txt",true);
+			FileOutputStream fos=new FileOutputStream("r.txt");
 			
 			byte b[]=s.getBytes();
 			fos.write(b);
