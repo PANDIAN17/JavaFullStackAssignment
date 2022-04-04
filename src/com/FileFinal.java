@@ -1,5 +1,6 @@
 package com;
 
+import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -50,7 +51,7 @@ public class FileFinal {
 							System.err.println("Failed to delete the file:" + f);
 						
 					}
-					//f.close();
+					//((Closeable) f).close();
 					break;	
 				case 3:
 					String path2 = "C:\\Users\\jpand\\Software\\Test\\";
