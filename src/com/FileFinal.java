@@ -22,6 +22,7 @@ public class FileFinal {
 										"2.Add/Delete/Search/Exit");
 		Scanner sc=new Scanner(System.in);
 		System.out.println("File operations");
+		String fileNm = "Pandian.txt";
 		while(true) {
 			System.out.println("Enter your choice 1.Add 2.Delete 3.search 4.Exit ");
 			int choice=sc.nextInt();
@@ -31,7 +32,7 @@ public class FileFinal {
 				String s="Hi how are you this is the first file";
 			
 			//byte
-			FileOutputStream fos=new FileOutputStream("r.txt");
+			FileOutputStream fos=new FileOutputStream(fileNm);
 			
 			byte b[]=s.getBytes();
 			fos.write(b);
@@ -40,9 +41,9 @@ public class FileFinal {
 	
 		 case 2:
 			System.out.println("Please enter the name of the file to be deleted");
-					String path = "C:\\Users\\jpand\\Software\\Test\\z.txt";
-					String finalfile = path;
-					File f = new File(finalfile);
+					//String path = "C:\\Users\\jpand\\Software\\Test\\z.txt";
+					//String finalfile = path;
+					File f = new File(fileNm);
 					boolean flag1 = f.delete();
 					if(flag1) {
 						System.out.println("Selected file deleted Successfully"+f);
@@ -51,10 +52,10 @@ public class FileFinal {
 							System.err.println("Failed to delete the file:" + f);
 						
 					}
-					//((Closeable) f).close();
+					//f.close();
 					break;	
 				case 3:
-					String path2 = "C:\\Users\\jpand\\Software\\Test\\";
+					String path2 = "C:\\Users\\jpand\\eclipse-workspace\\JavaFullStackAssignment";
 					File  f2 = new File(path2);
 					System.out.println("Enter  the file name");
 					String filesearch = sc.next();
